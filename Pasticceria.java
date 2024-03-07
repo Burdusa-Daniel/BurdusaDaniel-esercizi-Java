@@ -66,6 +66,7 @@ public class Pasticceria {
                         System.out.println("hai scelto: " + decorazioni[i]);
                     }
                 }
+                // stampo la torta dell'utente
                 System.out.println("la tua torta è :");
                 System.out.println("base: " + base);
                 System.out.println("ripieno: " + ripieno);
