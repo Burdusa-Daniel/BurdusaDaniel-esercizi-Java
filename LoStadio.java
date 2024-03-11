@@ -53,5 +53,43 @@ public class LoStadio {
             contatore++;// contatore che aumento per il ciclo while
         }
 
+        // faccio scegliere all'utente cosa vuole sapere
+        System.out.println("che cosa vuoi sapere?");
+        System.out.println("premi 1 per la media minima di spettatori");
+        System.out.println("premi 2 per la media massima di spettatori");
+        System.out.println("premi 3 per la media minima di guadagni");
+        System.out.println("premi 4 per la media massima di guadagni");
+        int x = input.nextInt();
+
+        while (x >= 1 && x <= 4) {
+            switch (x) {
+                // provo a fare il minimo
+                case 1:
+                    int minimo = idSpettatori.get(0);
+                    for (int i = 0; i < idSpettatori.size(); i++) {
+                        if (idSpettatori.get(i) < minimo) {
+                            minimo = i;
+                            System.out.println("la media minima di spettatori è: " + minimo);
+                        }
+
+                    }
+                    break;
+                /*
+                 * case 2:
+                 * 
+                 * break;
+                 * case 3:
+                 * 
+                 * break;
+                 * case 4:
+                 * 
+                 * break;
+                 * default:
+                 * break;
+                 */
+            }
+
+        }
+
     }
 }
