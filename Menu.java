@@ -3,13 +3,14 @@ import java.util.*;
 public class Menu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         // prezzi degli ingredienti
         int prezzoNormale = 2;
         int prezzoSpeciale = 3;
 
         System.out.println("vuoi ordinare?");
         String inputUtente = input.nextLine();
-        int contatore = 0;
+
         if (inputUtente.equalsIgnoreCase("si")) {
             String riordine;
             do {
@@ -58,6 +59,7 @@ public class Menu {
                         System.out.println("ops");
                         break;
                 }
+                
                 // creo l'oggetto PiattoSpeciale
                 PiattoSpeciale piattoSpeciale = new PiattoSpeciale(ingredienteSpeciale, ingredienteNormale,
                         prezzoSpeciale, prezzoNormale);
@@ -78,6 +80,6 @@ public class Menu {
         } else {
             System.out.println("ciao");
         }
-       
+
     }
 }
