@@ -4,7 +4,6 @@ public class Menu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         // prezzi degli ingredienti
-        int prezzoTotale = 0;
         int prezzoNormale = 2;
         int prezzoSpeciale = 3;
 
@@ -12,7 +11,6 @@ public class Menu {
         String inputUtente = input.nextLine();
         int contatore = 0;
         if (inputUtente.equalsIgnoreCase("si")) {
-            contatore++;
             String riordine;
             do {
                 // gli chiedo che ingrediente speciale vuole
