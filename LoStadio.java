@@ -22,9 +22,9 @@ public class LoStadio {
 
         while (contatore < weekEnd) {// utilizzo la variabile contatore di prima
 
-            // randomizzo il numero di spettatori il sabato e la domenica da 1 a 90000
-            int spettatoriSabato = random.nextInt(90000) + 1;
-            int spettatoriDomenica = random.nextInt(90000) + 1;
+            // randomizzo il numero di spettatori il sabato e la domenica da 1 a 99000
+            int spettatoriSabato = random.nextInt(99000) + 1;
+            int spettatoriDomenica = random.nextInt(99000) + 1;
 
             // li stampo
             System.out.println("gli spettatori il sabato sono: " + spettatoriSabato);
@@ -61,37 +61,64 @@ public class LoStadio {
         System.out.println("premi 4 per la media minima di guadagni");
         int x = input.nextInt();
 
-        while (x >= 1 && x <= 4) {
+        if (x >= 1 && x <= 4) {
             switch (x) {
-                // provo a fare il massimo
+
+                // massimo di spettatori
                 case 1:
-                    int massimo = idSpettatori.get(0);
+                    int massimoSpettatori = idSpettatori.get(0);
                     for (int i = 0; i < idSpettatori.size(); i++) {
-                        if (idSpettatori.get(i) < massimo) {
-
-                            massimo = massimo;
-
+                        if (idSpettatori.get(i) < massimoSpettatori) {
+                            massimoSpettatori = massimoSpettatori;
                         } else {
-                            massimo = idSpettatori.get(i);
+                            massimoSpettatori = idSpettatori.get(i);
                         }
-
                     }
-                    System.out.println("la media minima di spettatori è: " + massimo);
-
+                    System.out.println("il massimo numero di spettatori è: " + massimoSpettatori);
                     break;
-                /*
-                 * case 2:
-                 * 
-                 * break;
-                 * case 3:
-                 * 
-                 * break;
-                 * case 4:
-                 * 
-                 * break;
-                 * default:
-                 * break;
-                 */
+
+                // minimo spettatori
+                case 2:
+                    int minimoSpettatori = idSpettatori.get(0);
+                    for (int i = 0; i < idSpettatori.size(); i++) {
+                        if (idSpettatori.get(i) > minimoSpettatori) {
+                            minimoSpettatori = minimoSpettatori;
+                        } else {
+                            minimoSpettatori = idSpettatori.get(i);
+                        }
+                    }
+                    System.out.println("il minimo numero di spettatori è:" + minimoSpettatori);
+                    break;
+
+                // massimo guadagno
+                case 3:
+                    int massimoGuadagni = guadagniTotali.get(0);
+                    for (int i = 0; i < guadagniTotali.size(); i++) {
+                        if (guadagniTotali.get(i) < massimoGuadagni) {
+                            massimoGuadagni = massimoGuadagni;
+                        } else {
+                            massimoGuadagni = guadagniTotali.get(i);
+                        }
+                    }
+                    System.out.println("il massimo guadagno  è: " + massimoGuadagni);
+                    break;
+
+                // minimo guadagno
+                case 4:
+                    int minimoGuadagni = guadagniTotali.get(0);
+                    for (int i = 0; i < guadagniTotali.size(); i++) {
+                        if (guadagniTotali.get(i) > minimoGuadagni) {
+                            minimoGuadagni = minimoGuadagni;
+                        } else {
+                            minimoGuadagni = guadagniTotali.get(i);
+                        }
+                    }
+                    System.out.println("il guadagno minimo  è: " + minimoGuadagni);
+                    break;
+                default:
+                    System.out.println("ops");
+                    break;
+
             }
 
         }
