@@ -59,11 +59,11 @@ public class Menu {
                         System.out.println("ops");
                         break;
                 }
-                
+
                 // creo l'oggetto PiattoSpeciale
                 PiattoSpeciale piattoSpeciale = new PiattoSpeciale(ingredienteSpeciale, ingredienteNormale,
                         prezzoSpeciale, prezzoNormale);
-                System.out.println("hai scelto un panino con: " + piattoSpeciale.getIngredienteSpeciale() + " "
+                System.out.println("hai scelto un panino con: " + piattoSpeciale.getIngredienteSpeciale() + " e "
                         + piattoSpeciale.getIngredienteNormale());
 
                 // calcolo il prezzo del panino e lo stampo
