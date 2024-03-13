@@ -1,4 +1,4 @@
-public class Tablet extends DispositivoElettronico {
+public class Tablet extends ResocontoDigitale {
     float punti;
     int id;
 
@@ -8,10 +8,25 @@ public class Tablet extends DispositivoElettronico {
     }
 
     @Override
-    public void avviaApplicazione(String nomeApp) {
-        System.out.println("l'applicazione che stai avviando è:" + nomeApp);
+    public void avviaApplicazione() {
         System.out.println("L'id utente è: " + id);
         System.out.println("con " + punti + " punti");
+    }
+
+    public float getPunti() {
+        return punti;
+    }
+
+    public void setPunti(float punti) {
+        this.punti = punti;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

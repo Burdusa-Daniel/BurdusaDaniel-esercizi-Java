@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Smartphone extends DispositivoElettronico {
+public class Smartphone extends ResocontoDigitale {
 
     String nome;
     String password;
@@ -13,8 +13,7 @@ public class Smartphone extends DispositivoElettronico {
     Scanner input = new Scanner(System.in);
 
     @Override
-    public void avviaApplicazione(String nomeApp) {
-        System.out.println("l'applicazione che stai avviando è:" + nomeApp);
+    public void avviaApplicazione() {
         loggIn();
     }
 
@@ -26,6 +25,30 @@ public class Smartphone extends DispositivoElettronico {
         System.out.println("stai accedendo con le seguenti credenziali:");
         System.out.println("nome: " + nome);
         System.out.println("password: " + password);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Scanner getInput() {
+        return input;
+    }
+
+    public void setInput(Scanner input) {
+        this.input = input;
     }
 
 }
