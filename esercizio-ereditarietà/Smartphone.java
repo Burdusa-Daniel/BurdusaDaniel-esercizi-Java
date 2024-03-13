@@ -4,6 +4,9 @@ public class Smartphone extends ResocontoDigitale {
 
     String nome;
     String password;
+    public Smartphone(){
+        
+    }
 
     public Smartphone(String nome, String password) {
         this.nome = nome;

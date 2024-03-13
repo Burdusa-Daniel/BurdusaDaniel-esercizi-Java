@@ -2,6 +2,10 @@ public class Tablet extends ResocontoDigitale {
     float punti;
     int id;
 
+    public Tablet(){
+        
+    }
+
     public Tablet(float punti, int id) {
         this.punti = (float) (Math.random() + 10000);
         this.id = 1;
