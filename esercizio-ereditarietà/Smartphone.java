@@ -13,16 +13,19 @@ public class Smartphone extends DispositivoElettronico {
     Scanner input = new Scanner(System.in);
 
     @Override
-    public String avviaApplicazione(String nomeApp) {
-        return super.avviaApplicazione(nomeApp);
-
+    public void avviaApplicazione(String nomeApp) {
+        System.out.println("l'applicazione che stai avviando è:" + nomeApp);
+        loggIn();
     }
 
-    public void loggIn() {
+    private void loggIn() {
         System.out.println("inserisci il nome utente");
         String nome = input.nextLine();
         System.out.println("inserisci la password");
         String password = input.nextLine();
+        System.out.println("stai accedendo con le seguenti credenziali:");
+        System.out.println("nome: " + nome);
+        System.out.println("password: " + password);
     }
 
 }
