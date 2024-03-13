@@ -8,7 +8,7 @@ public class Tablet extends ResocontoDigitale {
     }
 
     @Override
-    public void avviaApplicazione() {
+    public void avviaApplicazione(String nomeApp) {
         System.out.println("L'id utente è: " + id);
         System.out.println("con " + punti + " punti");
     }

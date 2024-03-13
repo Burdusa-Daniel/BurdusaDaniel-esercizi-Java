@@ -13,7 +13,7 @@ public class Smartphone extends ResocontoDigitale {
     Scanner input = new Scanner(System.in);
 
     @Override
-    public void avviaApplicazione() {
+    public void avviaApplicazione(String nomeApp) {
         loggIn();
     }
 
