@@ -1,25 +1,24 @@
 import java.util.*;
 
-public class Smartphone extends ResocontoDigitale {
+public class Smartphone extends DispositivoElettronico {
 
     String nome;
     String password;
-    public Smartphone(){
-        
+
+    // costruttore vuoto
+    public Smartphone() {
     }
 
-    public Smartphone(String nome, String password) {
-        this.nome = nome;
-        this.password = password;
-    }
-
+    // importo lo Scanner
     Scanner input = new Scanner(System.in);
 
+    // override del metodo per avviare l'app con il loggin
     @Override
     public void avviaApplicazione(String nomeApp) {
         loggIn();
     }
 
+    // metodo loggin da smartphone
     private void loggIn() {
         System.out.println("inserisci il nome utente");
         String nome = input.nextLine();
@@ -30,6 +29,7 @@ public class Smartphone extends ResocontoDigitale {
         System.out.println("password: " + password);
     }
 
+    // Getters & Setters
     public String getNome() {
         return nome;
     }

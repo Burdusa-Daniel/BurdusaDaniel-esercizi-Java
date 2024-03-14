@@ -1,26 +1,22 @@
-public class Tablet extends ResocontoDigitale {
+public class Tablet extends DispositivoElettronico {
+
     float punti;
     int id;
 
+    // costruttore vuoto
     public Tablet() {
-
     }
 
-    // !!!!!!non funziona
-    
-    
-    
-    public Tablet(float punti, int id) {
-        this.punti = (float) (Math.random() + 10000);
-        this.id = 1;
-    }
-
+    // override del metodo per avviare l'app id e punti random
     @Override
     public void avviaApplicazione(String nomeApp) {
+        int id = (int) (Math.random() * 10000);
+        float punti = (float) (Math.random() * 10000);
         System.out.println("L'id utente è: " + id);
         System.out.println("con " + punti + " punti");
     }
 
+    // Getters & Setters
     public float getPunti() {
         return punti;
     }
