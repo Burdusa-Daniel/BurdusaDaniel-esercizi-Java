@@ -40,6 +40,7 @@ public class Biblioteca {
         int numeroCopie = input.nextInt();
         // creo l'oggetto
         Libro libro = findByName(nomeLibro);
+        //rimuovo il libro
         if (libro != null) {
             libri.remove(libro);
             System.out.println("libro rimosso");
@@ -60,12 +61,13 @@ public class Biblioteca {
         }
     }
 
+    // metodo per trovare il libro tramite il nome
     public Libro findByName(String nome) {
         for (Libro libro : libri) {
             if (libro.getNome().equals(nome)) {
-                return libro;
+                return libro;//se lo trova
             }
         }
-        return null;
+        return null;//se non trova il libro cercato
     }
 }
